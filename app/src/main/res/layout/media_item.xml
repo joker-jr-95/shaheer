@@ -1,0 +1,57 @@
+<androidx.cardview.widget.CardView
+    android:id="@+id/media_item"
+android:visibility="gone"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_large"
+    android:layout_marginRight="@dimen/margin_normal"
+    android:layout_marginLeft="@dimen/margin_normal"
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/iv_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+
+        >
+        <ImageView
+            android:id="@+id/iv_holder"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/vid_lay"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+
+
+        >
+        <ImageView
+            android:id="@+id/vid_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:elevation="9dp"
+            android:visibility="gone"
+            android:src="@drawable/play_button_arrowhead"
+            />
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/video_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+
+
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

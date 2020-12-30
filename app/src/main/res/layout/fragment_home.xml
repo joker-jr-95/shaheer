@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorStory"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/featured_stories"
+            android:fontFamily="@font/cairo_regular"
+            android:layout_margin="@dimen/margin_small"
+            />
+        <LinearLayout
+            android:id="@+id/main_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:elevation="6dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <RelativeLayout
+                    android:id="@+id/rel_bg"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:background="@drawable/story_bg"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_add_story"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@mipmap/big_image_user"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/margin_small"
+                        />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/floting"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/textsize4"
+                    android:fontFamily="@font/cairo_regular"
+                    android:layout_margin="@dimen/margin_small"
+                    android:ellipsize="end"
+                    android:maxLength="10"
+                    />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/stories_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+
+                />
+        </LinearLayout>
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_stories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmer_auto_start="true"
+            android:visibility="gone"
+            >
+            <include
+                layout="@layout/shimmer_load_stories"
+                />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/shimmer_loading_connect"
+        android:id="@+id/shimmer_load"
+        android:visibility="gone"
+
+        />
+    <LinearLayout
+        android:id="@+id/rec_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorStory"
+
+
+
+
+        >
+        <TextView
+            android:id="@+id/empty_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/sorry_no_posts"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:minHeight="600dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/cairo_regular"
+            android:textSize="@dimen/textsize1"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/posts_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            />
+        <ProgressBar
+            android:id="@+id/load_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/colorAccent"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/iv_shimmer_drawable"
+            android:layout_margin="@dimen/margin_normal"
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_med"
+            android:background="@drawable/iv_shimmer_rect"
+            >
+
+            <TextView
+                android:id="@+id/tv_comment_name"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_medium"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:id="@+id/tv_comment_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_medium"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:textColor="@android:color/darker_gray"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_height="100dp"
+                app:cardCornerRadius="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                app:cardBackgroundColor="@android:color/black"
+                android:visibility="gone"
+                android:layout_width="100dp">
+
+                <ImageView
+                    android:id="@+id/iv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/logo"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            android:src="@mipmap/big_image_user"
+            android:layout_margin="@dimen/margin_normal"
+            />
+
+        TextView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:textStyle="bold"
+            android:background="@color/color_shimmer"
+            android:textColor="@android:color/darker_gray"
+            android:fontFamily="@font/cairo_bold"
+            android:textSize="@dimen/textsize2"
+            android:paddingRight="@dimen/padding_med"
+            android:paddingLeft="@dimen/padding_med"
+            />
+        TextView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:textStyle="bold"
+            android:background="@color/color_shimmer"
+            android:textColor="@android:color/darker_gray"
+            android:fontFamily="@font/cairo_bold"
+            android:textSize="@dimen/textsize2"
+            android:paddingRight="@dimen/padding_med"
+            android:paddingLeft="@dimen/padding_med"
+            />
+
+    </LinearLayout>
+</LinearLayout>

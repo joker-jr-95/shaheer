@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/margin_large"
+    android:layout_marginBottom="@dimen/margin_large"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_above="@+id/reg_lay"
+        >
+        <ImageView
+            android:id="@+id/src_img"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_large"
+            android:src="@mipmap/image_intro_one"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/src_img"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_large"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:text="title"
+            android:fontFamily="@font/cairo_bold"
+            android:textSize="@dimen/textsize2"
+            />
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/cairo_regular"
+
+            android:layout_marginTop="@dimen/margin_large"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:text="هنا محتوي وصفي للخدمةهنا محتوي وصفي للخدمةهنا محتوي وصفي للخدمة هنا محتوي وصفي للخدمة"
+            android:textSize="@dimen/textsize3"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/reg_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_alignParentBottom="true"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="@string/sign_up"
+            app:cornerRadius="@dimen/margin_above_large"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/cairo_bold"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/login"
+            app:cornerRadius="@dimen/margin_above_large"
+            app:strokeColor="@color/colorPrimaryDark"
+            app:strokeWidth="1dp"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/cairo_bold"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

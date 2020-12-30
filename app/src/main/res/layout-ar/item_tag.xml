@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_normal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/service_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:minWidth="120dp"
+        android:text="design"
+        android:background="@drawable/btn_service_bg"
+        android:gravity="center"
+        app:cornerRadius="6dp"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:fontFamily="@font/cairo_regular"
+        android:textSize="@dimen/textsize3"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

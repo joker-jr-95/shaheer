@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBg"
+    >
+    <include
+        layout="@layout/toolbar_normal"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/margin_normal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="@dimen/padding_med"
+
+            />
+    </LinearLayout>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/margin_normal"
+    android:layout_margin="@dimen/margin_large"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:text="@string/change_password"
+            android:layout_marginTop="@dimen/margin_large"
+            android:fontFamily="@font/cairo_bold"
+            android:textSize="@dimen/textsize"
+            />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/editTextInput"
+        android:id="@+id/etOldPassLay"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:hint="@string/current_pass"
+        android:textDirection="rtl"
+        android:layoutDirection="rtl"
+        android:textAlignment="viewStart"
+        android:fontFamily="@font/cairo_regular"
+
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOldPass"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:drawablePadding="@dimen/padding_med"
+            android:fontFamily="@font/cairo_regular"
+
+            android:textDirection="rtl"
+            android:layoutDirection="rtl"
+            android:textAlignment="viewStart"
+
+            android:inputType="textPassword"
+            android:textSize="@dimen/textsize2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etNewPassLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/editTextInput"
+
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:hint="@string/new_password"
+        android:fontFamily="@font/cairo_regular"
+
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textDirection="rtl"
+            android:layoutDirection="rtl"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/textsize2"
+            android:fontFamily="@font/cairo_regular"
+            android:drawablePadding="@dimen/padding_med"
+            android:inputType="textPassword"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etconfLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/editTextInput"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:hint="@string/confirm_new_password"
+        android:fontFamily="@font/cairo_regular"
+
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConfPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textDirection="rtl"
+            android:layoutDirection="rtl"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/textsize2"
+            android:fontFamily="@font/cairo_regular"
+            android:drawablePadding="@dimen/padding_med"
+            android:inputType="textPassword"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="@string/send"
+            android:alpha="0.5"
+            android:enabled="false"
+            android:fontFamily="@font/cairo_regular"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_large"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

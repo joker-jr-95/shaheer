@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bar_lay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_normal">
+    <LinearLayout
+        android:id="@+id/msg_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/btn_price_drawable"
+
+        >
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/msg_checkbox"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:checked="true"
+            android:clickable="false"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_normal"
+            />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_margin="1dp"
+            />
+        <ImageView
+            android:id="@+id/iv_msg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:src="@drawable/envelope_gray"
+
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            />
+        <TextView
+            android:id="@+id/tv_free"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="@string/free"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="right"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/call_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/btn_price_drawable"
+
+        >
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/call_check"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:buttonTint="@android:color/darker_gray"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_normal"
+            />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_margin="1dp"
+            />
+        <ImageView
+            android:id="@+id/iv_call"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:src="@drawable/telephone_gray"
+            android:tint="@android:color/darker_gray"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            />
+        <TextView
+            android:id="@+id/tv_call_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 sar"
+            android:gravity="center"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="right"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/video_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/btn_price_drawable"
+
+        >
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/video_box"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:buttonTint="@android:color/darker_gray"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_normal"
+            />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_margin="1dp"
+            />
+        <ImageView
+            android:id="@+id/vid_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:src="@drawable/video_camera"
+            android:tint="@android:color/darker_gray"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            />
+        <TextView
+            android:id="@+id/tv_vid_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="free"
+            android:gravity="center"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="right"
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:minHeight="600dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imgEmptyBase"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/text"
+android:layout_centerHorizontal="true"
+        android:src="@mipmap/empty_box"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/no_item"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/cairo_bold"
+        android:textSize="@dimen/textsize2"
+        />
+
+</RelativeLayout>

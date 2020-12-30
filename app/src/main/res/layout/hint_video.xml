@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_normal"
+    app:cardElevation="6dp"
+    app:strokeColor="@color/colorAccent"
+    app:strokeWidth="1dp"
+    android:layout_margin="@dimen/margin_normal"
+    app:cardBackgroundColor="@android:color/white"
+    >
+<TextView
+    android:id="@+id/tv_vid_hint"
+    android:padding="@dimen/padding_med"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/video_hint"
+    android:textColor="@color/colorAccent"
+    android:fontFamily="@font/cairo_regular"
+    android:textSize="@dimen/textsize2"
+    />
+</com.google.android.material.card.MaterialCardView>

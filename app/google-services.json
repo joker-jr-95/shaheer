@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "796376040005",
+    "firebase_url": "https://shaher-c6d42.firebaseio.com",
+    "project_id": "shaher-c6d42",
+    "storage_bucket": "shaher-c6d42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796376040005:android:50b890c93cea18ab9c992c",
+        "android_client_info": {
+          "package_name": "com.aait.shaheer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796376040005-1ek6k850f8p823t6hro82gig4c59ed9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChyvM6K9c8CRT0e10cAAvaq9qPqbFzJkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796376040005-1ek6k850f8p823t6hro82gig4c59ed9b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "796376040005-hdhaq1jh2ucqq47tgq5e0rivjgur3var.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aait.Shaher"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

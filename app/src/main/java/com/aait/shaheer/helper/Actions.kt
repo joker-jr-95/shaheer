@@ -1,0 +1,17 @@
+package com.aait.shaheer.helper
+
+enum class Actions {
+     RETWEET,LIKE,COMMENT,CART,SHARE,PROFILE
+}
+enum class Tweet {
+     FOLLOW,UNFOLLOW,REPORT,BLOCK,MUTE,HIDE
+}
+enum class PRICE_BAR {
+     VIDEO,CALL,MESSAGE
+}
+enum class SERVICE {
+     ORDERED,CANCELED,PROGRESS,COMPLETED
+}
+enum class ORDER{
+     CANCEL_ORDER,CHAT, REPORT, FINISH, RATE, ACCEPT,RETWEET,DELETE,WITH_DRAW
+}

@@ -1,0 +1,8 @@
+package com.aait.shaheer.FCM
+
+object FCM_ACTIONS {
+     var CALL_RESPONSE_ACTION_KEY="RECEIVE_CALL"
+     var RECEIVE_CALL="RECEIVE_CALL"
+     var REJECT_CALL="REJECT_CALL"
+     var CANCEL_CALL="CANCEL_CALL"
+}

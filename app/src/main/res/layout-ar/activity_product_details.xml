@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.details.ProductDetailsActivity">
+<include
+    layout="@layout/toolbar_normal"
+    />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+       <androidx.cardview.widget.CardView
+            app:cardCornerRadius="4dp"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="@color/black"
+           android:id="@+id/media_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/vid_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+
+                    >
+                    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                        android:id="@+id/video_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_centerHorizontal="true"
+
+
+                        />
+                </RelativeLayout>
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/sliderView_"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            android:layout_gravity="center_horizontal"
+            app:sliderCircularHandlerEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="8dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="@color/colorAccent"
+            app:sliderIndicatorUnselectedColor="#B3B3B3"
+            app:sliderScrollTimeInSec="2"
+            app:sliderStartAutoCycle="true" />
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/margin_normal"
+        app:cardElevation="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@mipmap/big_image_user"
+                android:layout_margin="@dimen/margin_normal"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/lin_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_small"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:text="user name"
+                        android:fontFamily="@font/cairo_bold"
+                        android:textSize="@dimen/textsize1"
+                        android:textColor="@android:color/black"
+                        />
+                    <ImageView
+                        android:id="@+id/iv_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/activate_user"
+                        android:layout_gravity="center_vertical|right"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        />
+                    <RatingBar
+                        android:id="@+id/rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rating="3"
+
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:progressTint="#eb7621"
+                        android:layout_gravity="center"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="designer"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/textsize3"
+                    android:layout_marginTop="-4dp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:textColor="@android:color/darker_gray"
+                    android:tint="@color/colorAccent"
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/margin_normal"
+                />
+
+            <include
+                layout="@layout/shop_bar_details"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                >
+            <TextView
+                android:id="@+id/tv_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="desc"
+                android:gravity="right"
+                android:textSize="@dimen/textsize2"
+                android:fontFamily="@font/cairo_regular"
+                />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 jan"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/textsize2"
+                android:fontFamily="@font/cairo_regular"
+                />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/margin_normal"
+                />
+            <include
+                layout="@layout/like_bar"
+                />
+
+            <include
+                layout="@layout/prices_shop_bar"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cart_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_above_large"
+                android:text="@string/add_cart"
+                android:textSize="@dimen/textsize3"
+                android:fontFamily="sans-serif"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

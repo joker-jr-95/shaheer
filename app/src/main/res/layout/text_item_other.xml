@@ -1,0 +1,118 @@
+<androidx.cardview.widget.CardView android:id="@+id/card_txt_other"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/margin_large"
+    app:contentPadding="@dimen/padding_med"
+    android:layout_marginRight="@dimen/margin_normal"
+    android:layout_marginLeft="@dimen/margin_normal"
+    android:layout_marginTop="@dimen/margin_small"
+
+    android:layout_marginBottom="@dimen/margin_small"
+    android:layout_gravity="left|center"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_other_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كلمة"
+            android:fontFamily="@font/cairo_regular"
+            android:textSize="@dimen/textsize2"
+
+            android:layout_gravity="right|center"
+            android:textColor="@android:color/black"
+            />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/rich_link_card_other"
+    android:visibility="gone"
+    >
+
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:textColor="@color/md_light_blue_400"
+        android:autoLink="web"
+        tools:text="Original Link"
+
+        android:textColorLink="@color/md_light_blue_400"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rich_link_original_url_other"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@drawable/bg_telegram_other"
+
+
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/rich_link_image_other"
+                android:layout_width="110dp"
+                android:layout_height="90dp" />
+
+            <LinearLayout
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/rich_link_title_other"
+                    android:textColor="@color/grey_900"
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:id="@+id/rich_link_desp_other"
+                    android:textColor="@color/blue_grey_300"
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/rich_link_url_other"
+                    android:visibility="gone"
+                    android:textColor="@color/blue_grey_700"
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

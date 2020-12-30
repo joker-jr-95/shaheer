@@ -1,0 +1,104 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:maxHeight="200dp"
+    android:elevation="@dimen/margin_normal"
+    android:layout_margin="@dimen/margin_normal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/big_image_user"
+        android:layout_margin="@dimen/margin_normal"
+
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_small"
+        >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:text="user name"
+            android:fontFamily="@font/cairo_bold"
+            android:textSize="@dimen/textsize1"
+            android:textColor="@android:color/black"
+            />
+            <TextView
+                android:id="@+id/tv_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="designer"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textSize="@dimen/textsize3"
+                android:layout_marginTop="-4dp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@android:color/darker_gray"
+                android:tint="@color/colorAccent"
+                />
+
+
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/follow_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:minWidth="120dp"
+        android:background="@drawable/follow_btn"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/follow"
+
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:fontFamily="@font/cairo_bold"
+        android:textSize="@dimen/textsize3"
+        android:textStyle="bold"
+        />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="invisible"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/big_image_user"
+        android:layout_margin="@dimen/margin_normal"
+
+        />
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize2"
+        android:maxLines="4"
+        android:minLines="2"
+        />
+
+</LinearLayout>
+    <View
+        android:id="@+id/view_item"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+</LinearLayout>

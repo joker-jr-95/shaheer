@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/lay_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@android:color/white"
+
+                >
+
+                <com.pnikosis.materialishprogress.ProgressWheel
+                    android:id="@+id/progress_wheel"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:matProg_barColor="@color/colorAccent"
+                    app:matProg_barWidth="4dp"
+                    app:matProg_progressIndeterminate="true" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lay_no_internet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgNoConnBase"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/no_connection"
+                    android:tint="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/msg_conn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgNoConnBase"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/error_connection"
+                    android:textSize="@dimen/textsize2"
+                    />
+                <Button
+                    android:id="@+id/rel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/msg_conn"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:textSize="@dimen/textsize2"
+                    android:text="@string/reload"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/lay_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgEmptyBase"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/empty_box"
+                    android:tint="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/noItemsMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgEmptyBase"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/no_item"
+                    android:textSize="@dimen/textsize2" />
+
+                <Button
+                    android:id="@+id/rel_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noItemsMsg"
+                    android:layout_centerInParent="true"
+                    android:text="@string/reload"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_base"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

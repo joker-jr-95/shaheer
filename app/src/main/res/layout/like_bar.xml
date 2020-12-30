@@ -1,0 +1,114 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_med"
+        android:gravity="center"
+        android:layout_weight="1"
+
+
+        >
+        <ImageView
+            android:id="@+id/like_img"
+            android:padding="@dimen/padding_med"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/like_gray"
+            app:tint="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/num_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.6"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@android:color/darker_gray"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_med"
+        android:gravity="center"
+        android:layout_weight="1"
+
+
+        >
+        <ImageView
+            android:id="@+id/comment_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="@dimen/padding_med"
+            android:src="@drawable/chat_bubble"
+
+            app:tint="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/num_msgs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.6"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@android:color/darker_gray"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_med"
+        android:gravity="center"
+
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/retweet_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/padding_med"
+            android:src="@drawable/retweet"
+
+            app:tint="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/num_retweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.6"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@android:color/darker_gray"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/share_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_med"
+        android:gravity="center"
+
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="@dimen/padding_med"
+            android:src="@drawable/share"
+
+            app:tint="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/num_shares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.6"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@android:color/darker_gray"
+            />
+    </LinearLayout>
+
+</LinearLayout>

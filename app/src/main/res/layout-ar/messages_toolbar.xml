@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        android:background="@color/transWhite"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:id="@+id/cart_toolbar_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/search_toolbar_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/padding_med"
+                    android:rotation="90"
+                    android:src="@drawable/search" />
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/title_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:text="@string/inbox"
+                android:textSize="@dimen/textsize"
+                android:fontFamily="@font/cairo_regular"
+                android:layout_centerInParent="true"
+                />
+
+            <LinearLayout
+                android:id="@+id/edit_toolbar_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+
+                android:background="?attr/selectableItemBackground"
+                android:layout_gravity="center_vertical"
+                android:layout_centerVertical="true"
+                >
+
+
+                <ImageView
+                    android:id="@+id/plus_msg_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="visible"
+                    android:src="@drawable/add_massege"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/padding_med"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

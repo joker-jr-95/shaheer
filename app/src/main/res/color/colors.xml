@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3abdc3</color>
+    <color name="colorPrimaryDark">#309ba2</color>  <!--#007672-->
+    <color name="colorAccent">#3abdc3</color>
+    <color name="colorTwitter">#6194F5</color>
+    <color name="colorFace">#4C3F9B</color>
+    <color name="colorInst">#E3E3E3</color>
+    <color name="colorBg">#41ab80</color><!--#00AF7C-->
+    <color name="colorScroll">#FAFAFA</color>
+    <color name="colorTransWhite">#4DFFFFFF</color>
+    <color name="color_Bg">#ECECEC</color>
+    <color name="color_grey">#C8CACA</color>
+    <color name="transBlack">#59000000</color>
+    <color name="transWhite">#4DFFFFFF</color>
+    <color name="coloreffect">#00cc00</color>
+    <color name="category_color_Bg">#f5f5f5</color>
+    <color name="selected_item">#e7e7e7</color>
+    <color name="caat_card_bg">#f5f5f5</color>
+    <color name="money_color">#e1c5be</color>
+    <color name="free_color">#80e4b5</color>
+    <color name="ads_color">#b47665</color>
+    <color name="color_jobs">#E0C880</color>
+    <color name="volunt_color">#7BDBA1</color>
+    <color name="color_volunt">#7BDBA1</color>
+    <color name="rate">#ffd400</color>
+
+</resources>

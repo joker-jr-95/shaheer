@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/margin_normal"
+                android:fontFamily="@font/cairo_bold"
+                android:padding="@dimen/padding_med"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:padding="@dimen/padding_med"
+                android:text="@string/register_hint"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/textsize2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@android:color/white">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_normal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/editTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:id="@+id/name_lay"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:textAlignment="viewStart"
+
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_normal"
+
+
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/padding_med"
+                            android:fontFamily="@font/cairo_regular"
+                            android:hint="@string/full_name"
+                            android:inputType="text"
+                            android:layoutDirection="rtl"
+                            android:textDirection="rtl"
+                            android:textAlignment="viewStart"
+
+                            android:padding="@dimen/margin_large"
+                            android:textSize="@dimen/textsize2"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/editTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:id="@+id/email_lay"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:textAlignment="viewStart"
+
+
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/padding_med"
+                            android:fontFamily="@font/cairo_regular"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:layoutDirection="rtl"
+                            android:textDirection="rtl"
+                            android:textAlignment="viewStart"
+
+                            android:padding="@dimen/margin_large"
+                            android:textSize="@dimen/textsize2"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        >
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+
+                            >
+                            <com.hbb20.CountryCodePicker
+                                android:id="@+id/country_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                app:ccp_autoDetectCountry="true"
+                                app:ccp_autoDetectLanguage="true"
+                                app:ccp_contentColor="@android:color/black"
+                                app:ccp_showFlag="true"
+                                app:ccp_showPhoneCode="false"
+                                android:background="@drawable/flag_circ"
+                                app:ccp_showArrow="true"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_large"
+                                android:layout_marginBottom="@dimen/margin_normal"
+                                app:ccp_showNameCode="false"
+                                app:ccp_textSize="@dimen/textsize2"
+                                />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/editTextInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_normal"
+                                android:id="@+id/phone_lay"
+                                android:layout_weight="1"
+                                android:layoutDirection="rtl"
+                                android:textDirection="rtl"
+                                android:textAlignment="viewStart"
+
+                                android:layout_marginTop="@dimen/margin_large"
+                                android:layout_marginRight="@dimen/margin_normal"
+                                android:layout_marginBottom="@dimen/margin_normal"
+
+
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="@dimen/padding_med"
+                                    android:fontFamily="@font/cairo_regular"
+                                    android:layoutDirection="rtl"
+                                    android:textDirection="rtl"
+                                    android:textAlignment="viewStart"
+                                    android:hint="@string/phone"
+                                    android:inputType="phone"
+                                    android:padding="@dimen/margin_large"
+                                    android:textSize="@dimen/textsize2"
+
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/editTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:id="@+id/etPassLay"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:textAlignment="viewStart"
+
+                        app:boxCornerRadiusTopStart="@dimen/margin_above_large"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_above_large"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_above_large"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_above_large"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:drawablePadding="@dimen/padding_med"
+                            android:fontFamily="@font/cairo_regular"
+                            android:layoutDirection="rtl"
+                            android:textDirection="rtl"
+                            android:textAlignment="viewStart"
+
+                            android:hint="@string/password"
+
+                            android:inputType="textPassword"
+                            android:padding="@dimen/margin_large"
+                            android:textSize="@dimen/textsize2"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/editTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:id="@+id/etConfPassLay"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:textAlignment="viewStart"
+
+                        app:boxCornerRadiusTopStart="@dimen/margin_above_large"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_above_large"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_above_large"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_above_large"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConfPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:drawablePadding="@dimen/padding_med"
+                            android:fontFamily="@font/cairo_regular"
+                            android:layoutDirection="rtl"
+                            android:textDirection="rtl"
+                            android:textAlignment="viewStart"
+
+                            android:hint="@string/confirm_password"
+
+                            android:inputType="textPassword"
+                            android:padding="@dimen/margin_large"
+                            android:textSize="@dimen/textsize2"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/reg_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:onClick="onLogin"
+                        android:alpha="0.5"
+                        android:enabled="false"
+                        android:text="@string/register"
+
+
+                        />
+                    <LinearLayout
+                        android:id="@+id/terms_lay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/margin_normal"
+                        android:padding="@dimen/padding_med"
+                        >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/terms_privacy"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/cairo_bold"
+
+                        />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

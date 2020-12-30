@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="@dimen/margin_normal"
+                android:fontFamily="@font/cairo_bold"
+                android:padding="@dimen/padding_med"
+                android:text="@string/login_now"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:padding="@dimen/padding_med"
+                android:text="@string/login_hint"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/textsize2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:background="@android:color/white">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_normal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/editTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:id="@+id/input_lay"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/padding_med"
+                            android:fontFamily="@font/cairo_regular"
+
+                            android:gravity="center_vertical|left"
+                            android:hint="@string/phone"
+                            android:inputType="phone"
+
+                            android:padding="@dimen/margin_large"
+                            android:textSize="@dimen/textsize2"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/editTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:id="@+id/etPassLay"
+                        app:boxCornerRadiusTopStart="@dimen/margin_above_large"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_above_large"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_above_large"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_above_large"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:drawablePadding="@dimen/padding_med"
+                            android:fontFamily="@font/cairo_regular"
+                            android:gravity="center_vertical|left"
+                            android:hint="@string/password"
+
+                            android:inputType="textPassword"
+                            android:padding="@dimen/margin_large"
+                            android:textSize="@dimen/textsize2"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/forgot_pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:onClick="onForget"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_med">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cairo_bold"
+                            android:text="@string/forget_password"
+                            android:textColor="@color/colorAccent"
+
+
+
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorAccent" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/login_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:onClick="onLogin"
+                        android:alpha="0.5"
+                        android:enabled="false"
+                        android:text="@string/login"
+
+
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

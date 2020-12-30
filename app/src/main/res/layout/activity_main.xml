@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aait.shaheer.helper.FullNavigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    >
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:background="@android:color/white"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <include
+                    android:id="@+id/main_toolbar"
+
+                    layout="@layout/toolbar_main"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <include
+                    android:id="@+id/toolbar_profile"
+                    android:layout_marginRight="20dp"
+                    layout="@layout/toolbar_profile"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <include
+                    android:id="@+id/inbox_toolbar"
+                    android:layout_marginRight="20dp"
+                    layout="@layout/messages_toolbar"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_width="match_parent" />
+                <include
+                    android:id="@+id/services_toolbar"
+                    android:layout_marginRight="20dp"
+                    layout="@layout/services_toolbar"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_width="match_parent" />
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:layout_above="@+id/bottom_coord"
+            android:layout_below="@+id/nested_lay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/bottom_coord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/fab_iv"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:elevation="9dp"
+                app:layout_anchorGravity="bottom|center_horizontal"
+
+                android:layout_centerInParent="true"
+                android:elevation="9dp"
+                android:src="@mipmap/floting"
+                />
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemIconTint="@color/bottom_nav_color"
+                app:itemTextColor="@color/bottom_nav_color"
+                android:background="@android:color/white"
+                app:itemHorizontalTranslationEnabled="true"
+                android:layout_gravity="bottom"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/nav_menu" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right" />
+
+</com.aait.shaheer.helper.FullNavigation>

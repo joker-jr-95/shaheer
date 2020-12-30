@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/big_image_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_above_large"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/avatar"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+
+
+        >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مستخدم"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/cairo_bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="connecting ..."
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_ans"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:padding="@dimen/padding_med"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/green_phone"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/margin_above_large"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/margin_above_large"
+        >
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:visibility="gone"
+            android:src="@drawable/speaker"
+            android:padding="@dimen/padding_med"
+            />
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:visibility="gone"
+            android:src="@drawable/record"
+            android:padding="@dimen/padding_med"
+            />
+        <ImageView
+            android:id="@+id/end_call_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:padding="@dimen/padding_med"
+            android:src="@drawable/end_call"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
+
+

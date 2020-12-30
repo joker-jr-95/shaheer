@@ -1,0 +1,259 @@
+<LinearLayout
+    android:id="@+id/main_lay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_normal"
+    app:cardCornerRadius="@dimen/margin_normal"
+    android:background="@drawable/bg_white"
+    android:elevation="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/card_lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/pinned_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                android:src="@mipmap/big_image_user"
+                android:layout_margin="@dimen/margin_normal"
+
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/pin_gray"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pinned_post"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:textColor="@android:color/darker_gray"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retweet_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                android:src="@mipmap/big_image_user"
+                android:layout_margin="@dimen/margin_normal"
+
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/retweet"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                />
+            <TextView
+                android:id="@+id/retweet_by_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/you_retweeted"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:textColor="@android:color/darker_gray"
+                />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/big_image_user"
+            android:layout_margin="@dimen/margin_normal"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/lin_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_small"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="user name"
+                android:fontFamily="@font/cairo_bold"
+                android:textSize="@dimen/textsize1"
+                android:textColor="@android:color/black"
+                />
+                <ImageView
+                    android:id="@+id/iv_active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/activate_user"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="designer"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textSize="@dimen/textsize3"
+                android:layout_marginTop="-4dp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@android:color/darker_gray"
+                android:tint="@color/colorAccent"
+                />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/published_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jan 5"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_gravity="center"
+                android:textColor="@android:color/darker_gray"
+                />
+            <ImageView
+                android:id="@+id/post_menu_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/more"
+                android:padding="@dimen/padding_med"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:visibility="invisible"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/big_image_user"
+            android:layout_margin="@dimen/margin_normal"
+
+            />
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize2"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            />
+
+
+    </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/vid_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+
+            android:layout_gravity="center"
+            android:background="@color/black"
+
+            >
+            <ImageView
+                android:id="@+id/vid_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:elevation="9dp"
+                android:src="@drawable/play_button_arrowhead"
+                />
+
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:minHeight="300dp"
+
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_normal"
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_imgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    <include
+        layout="@layout/shop_bar"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_margin="@dimen/margin_normal"
+        />
+        <include
+            layout="@layout/like_bar"
+            />
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

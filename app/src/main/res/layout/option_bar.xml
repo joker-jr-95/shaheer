@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bar_lay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_normal">
+    <LinearLayout
+        android:id="@+id/msg_lay"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="3dp"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/btn_price_drawable"
+
+        >
+        <ImageView
+            android:id="@+id/iv_msg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mail"
+            android:tint="@color/colorAccent"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/call_lay"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/btn_price_drawable"
+
+        >
+        <ImageView
+            android:id="@+id/iv_call"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:src="@drawable/telephone_gray"
+            android:tint="@android:color/darker_gray"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/video_lay"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/btn_price_drawable"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_normal"
+            />
+        <ImageView
+            android:id="@+id/vid_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:src="@drawable/video_camera"
+            android:tint="@android:color/darker_gray"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

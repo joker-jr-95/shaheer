@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        android:background="@color/transWhite"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/cart_toolbar_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+
+                >
+                <ImageView
+                    android:id="@+id/service_search_toolbar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="@dimen/padding_med"
+                    android:rotation="90"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/search"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/title_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:text="@string/services"
+                android:textSize="@dimen/textsize"
+                android:fontFamily="@font/cairo_regular"
+                android:layout_centerInParent="true"
+                />
+
+            <LinearLayout
+                android:id="@+id/edit_toolbar_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+
+                android:background="?attr/selectableItemBackground"
+                android:layout_gravity="center_vertical"
+                android:layout_centerVertical="true"
+                >
+
+
+                <ImageView
+                    android:id="@+id/img_cart_service"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="visible"
+                    android:src="@drawable/shopping_bag"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/padding_med"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

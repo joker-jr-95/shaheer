@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:minHeight="400dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBg">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
+        app:cardCornerRadius="@dimen/margin_normal"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+        layout="@layout/shimmer_loading_connect"
+        android:id="@+id/shimmer_load"
+        android:visibility="gone"
+
+        />
+    <LinearLayout
+        android:id="@+id/follow_rec_lay"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/followers_rec"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <ProgressBar
+            android:id="@+id/load_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/colorAccent"
+            />
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/empty_followers"
+        android:gravity="center"
+        android:visibility="gone"
+        android:minHeight="400dp"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/cairo_regular"
+        android:textSize="@dimen/textsize1"
+        />
+
+</LinearLayout>

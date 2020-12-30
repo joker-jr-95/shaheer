@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/empty_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="500dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@android:color/white"
+
+        >
+        <ImageView
+            android:id="@+id/empty_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/empty_box"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:tint="@color/colorAccent"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/cairo_regular"
+            android:textSize="@dimen/textsize1"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_messages"
+            android:layout_below="@id/empty_iv"
+            android:gravity="center"
+            android:fontFamily="@font/cairo_bold"
+            android:textSize="@dimen/textsize2"
+            android:textColor="@color/colorAccent"
+            />
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_auto_start="true"
+        android:visibility="gone"
+        >
+        <include
+            layout="@layout/shimmer_rooms"
+            />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chat_rec"/>
+</LinearLayout>

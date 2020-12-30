@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.intro.GettingStartActivity">
+<TextView
+    android:id="@+id/start_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/getting_start"
+    android:fontFamily="@font/cairo_bold"
+    android:layout_centerHorizontal="true"
+    android:textColor="@android:color/black"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/margin_xxlarge"
+    />
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@mipmap/start_intro_image"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/start_tv"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        />
+    <LinearLayout
+        android:layout_below="@+id/iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+
+    com.facebook.login.widget.LoginButton
+        android:id="@+id/face_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:fontFamily="@font/cairo_regular"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+
+        android:text="@string/continue_face_btn"
+
+        android:textColor="@android:color/white"
+        />
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_large"
+
+        />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_gravity="center_horizontal"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_xxlarge"
+                android:layout_marginRight="@dimen/margin_large"
+
+                android:background="@android:color/darker_gray"
+
+                />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/or"
+
+            android:fontFamily="@font/cairo_bold"
+
+
+            />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin_xxlarge"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:background="@android:color/darker_gray"
+
+                />
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:text="@string/sign_up"
+            app:cornerRadius="@dimen/margin_above_large"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/cairo_bold"
+            />
+        <LinearLayout
+            android:id="@+id/login_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_normal"
+            android:padding="@dimen/padding_med"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Existing_user"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_now"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

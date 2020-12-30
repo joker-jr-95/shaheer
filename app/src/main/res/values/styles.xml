@@ -1,0 +1,164 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/cairo_textView_style</item>
+        <item name="android:editTextStyle">@style/cairo_edit_style</item>
+        <item name="materialButtonStyle">@style/cairo_btn_style</item>
+        <!--<item name="android:typeface">serif</item>-->
+        <item name="android:fontFamily">@font/cairo_regular</item>
+        <!--<item name="textInputStyle">@style/cairo_edit_material_style</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowActivityTransitions" tools:targetApi="lollipop">true</item>
+
+    </style>
+    <style name="MyBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MYBottomSheetStyle</item>
+    </style>
+    <style name="AppTheme.Custom" parent="MD_ListItem_Control">
+        <item name="md_corner_radius">16dp</item>
+        <item name="ccp_textSize">@dimen/textsize2</item>
+        <item name="md_color_title">@android:color/black</item>
+        <item name="md_color_content">@android:color/darker_gray</item>
+        <item name="md_color_button_text">@color/colorAccent</item>
+        <item name="md_font_title">@font/cairo_regular</item>
+        <item name="md_font_body">@font/cairo_regular</item>
+        <item name="md_font_button">@font/cairo_regular</item>
+
+    </style>
+
+    <style name="MYBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+
+    </style>
+
+    <style name="cairo_textView_style" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/cairo_regular</item>
+
+    </style>
+    <style name="cairo_edit_style" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/cairo_regular</item>
+
+    </style>
+
+    <style name="editTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="android:fontFamily">@font/cairo_regular</item>
+        <item name="boxStrokeColor">@android:color/darker_gray</item>
+        <item name="tint">@android:color/transparent</item>
+        <item name="hintTextColor">@color/colorPrimaryDark</item>
+        <item name="strokeWidth">0dp</item>
+
+        <item name="android:height">56dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/margin_above_large</item>
+
+
+    </style>
+
+    <style name="editTextInputProfile" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <item name="android:fontFamily">@font/cairo_regular</item>
+        <item name="boxStrokeColor">#f2f3f5</item>
+
+        <item name="boxStrokeWidth">0.5dp</item>
+        <item name="tint">@android:color/transparent</item>
+        <item name="hintTextColor">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+
+        <item name="strokeWidth">0dp</item>
+        <item name="android:height">56dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/margin_above_large</item>
+
+
+    </style>
+
+    <style name="editTextInputJob" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <item name="android:fontFamily">@font/cairo_regular</item>
+        <item name="boxStrokeColor">@android:color/transparent</item>
+
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="tint">@android:color/transparent</item>
+        <item name="hintTextColor">@color/color_jobs</item>
+        <item name="colorAccent">@color/color_jobs</item>
+        <item name="colorControlNormal">@color/color_jobs</item>
+        <item name="colorControlActivated">@color/color_jobs</item>
+
+        <item name="strokeWidth">0dp</item>
+        <item name="android:height">56dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/margin_above_large</item>
+
+
+    </style>
+
+    <style name="editTextInputVolunt" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <item name="android:fontFamily">@font/cairo_regular</item>
+        <item name="boxStrokeColor">@android:color/transparent</item>
+
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="tint">@android:color/transparent</item>
+        <item name="hintTextColor">@color/volunt_color</item>
+        <item name="colorAccent">@color/volunt_color</item>
+        <item name="colorControlNormal">@color/volunt_color</item>
+        <item name="colorControlActivated">@color/volunt_color</item>
+
+        <item name="strokeWidth">0dp</item>
+        <item name="android:height">56dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/margin_above_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/margin_above_large</item>
+
+
+    </style>
+
+    <style name="cairo_btn_style" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/cairo_bold</item>
+        <item name="android:height">56dp</item>
+        <item name="android:textSize">@dimen/textsize2</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">@dimen/margin_above_large</item>
+
+
+    </style>
+
+    <style name="MyShapeAppearance">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="switchStyle2" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+
+        <!-- set your color -->
+    </style>
+
+
+
+</resources>

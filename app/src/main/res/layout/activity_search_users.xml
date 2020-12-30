@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBg"
+    tools:context=".ui.activity.main.ui.search.SearchActivity">
+    <include
+        layout="@layout/toolbar_normal"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+
+        android:layout_margin="@dimen/margin_large"
+        android:background="@drawable/bg_search"
+        android:padding="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+
+            android:hint="@string/search_hint_user"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/textsize2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/search_dialog_ic_search" />
+    </LinearLayout>
+    <include
+        layout="@layout/empty_lay"
+        />
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_auto_start="true"
+        android:visibility="gone"
+        >
+        <include
+            layout="@layout/shimmer_rooms"
+            />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/rec_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:layout_gravity="center_horizontal"
+            />
+        <ProgressBar
+            android:id="@+id/load_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:indeterminateTint="@color/colorAccent"
+            />
+    </LinearLayout>
+</LinearLayout>

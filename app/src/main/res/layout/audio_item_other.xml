@@ -1,0 +1,95 @@
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_audio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/margin_normal"
+    android:clipToPadding="false"
+    android:layout_gravity="left"
+    android:layout_marginRight="@dimen/margin_normal"
+    android:layout_marginLeft="@dimen/margin_xxlarge"
+    android:layout_marginTop="@dimen/margin_normal"
+    android:layout_marginBottom="@dimen/margin_normal"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/audio_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:padding="@dimen/padding_med"
+            app:cardBackgroundColor="#F5F8F8"
+            app:cardCornerRadius="12dp"
+            android:clipToPadding="false"
+            app:contentPadding="@dimen/padding_med"
+
+            android:layoutDirection="ltr"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/seekbar_aud"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    android:progress="0"
+                    />
+                <SeekBar
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    android:progress="0"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/time_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:text="00:00"
+            android:layout_gravity="bottom"
+            />
+        <LinearLayout
+            android:id="@+id/pdf_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pdf_file"
+                android:tint="@android:color/black"
+                />
+            <TextView
+                android:id="@+id/tv_file_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="تحميل الملف"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize2"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="bottom"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

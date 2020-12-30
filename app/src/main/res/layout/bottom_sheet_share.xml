@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@android:color/white"
+    android:padding="10dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="60dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="false"
+        android:scrollbars="vertical">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize1"
+        android:fontFamily="@font/cairo_bold"
+        android:layout_margin="@dimen/margin_large"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+
+        android:layout_margin="@dimen/margin_large"
+        android:background="@drawable/bg_search_gray"
+        android:padding="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:hint="@string/search_hint_user"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/textsize2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/search_dialog_ic_search" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rec_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="@dimen/margin_large"
+            />
+        <ProgressBar
+            android:id="@+id/load_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:indeterminateTint="@color/colorAccent"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_empty_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:layout_margin="@dimen/margin_large"
+        >
+
+
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_search_result"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/cairo_bold"
+            android:textSize="@dimen/textsize2"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/copy_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_search_gray"
+            android:padding="@dimen/padding_med"
+            android:layout_centerVertical="true"
+            >
+        <ImageView
+            android:id="@+id/iv_copy"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/copy_link"
+            android:layout_margin="@dimen/margin_normal"
+
+            />
+        </LinearLayout>
+            <TextView
+                android:id="@+id/copy_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/margin_small"
+
+
+                android:fontFamily="@font/cairo_black"
+                android:text="@string/copy_link"
+                android:textSize="@dimen/textsize2" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/share_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_search_gray"
+            android:padding="@dimen/padding_med"
+
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/send_post"
+                android:layout_margin="@dimen/margin_normal"
+                />
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share"
+                android:layout_below="@id/share_lay"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_small"
+                android:textSize="@dimen/textsize2"
+                android:fontFamily="@font/cairo_black"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/bookmark_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_search_gray"
+            android:padding="@dimen/padding_med"
+
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/iv_bookmark"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bookmark_gray"
+                android:layout_margin="@dimen/margin_normal"
+                />
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bookmark"
+                android:layout_below="@id/share_lay"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_small"
+                android:textSize="@dimen/textsize2"
+                android:fontFamily="@font/cairo_black"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+</FrameLayout>

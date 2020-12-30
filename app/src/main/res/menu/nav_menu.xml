@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/feed"
+        android:icon="@mipmap/home_line_blue"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/colorPrimaryDark"
+        android:title="@string/feed" />
+
+    <item
+        android:id="@+id/services"
+        android:icon="@mipmap/wireframe_services_blue"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/colorPrimaryDark"
+        android:title="@string/services" />
+
+
+    <item
+        android:id="@+id/add"
+        app:showAsAction="never"
+        android:title="" />
+
+    <item
+        android:id="@+id/inbox"
+        android:icon="@mipmap/inbox"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/colorPrimaryDark"
+        android:title="@string/inbox" />
+
+
+
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@mipmap/user_blue"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/colorPrimaryDark"
+        android:title="@string/profile" />
+        item
+    android:id="@+id/notif"
+    android:icon="@mipmap/ring"
+    app:showAsAction="ifRoom"
+    android:iconTint="@color/colorPrimaryDark"
+    android:title="@string/notifications" />
+
+
+</menu>
